@@ -18,7 +18,11 @@ public class S6 {
 
         System.out.println("Кол-во элементов: " + set1.mySize());
 
-        System.out.println("Элемент по индексу 3: " + set1.myGet(3));
+        for (int i = 0; i < set1.mySize(); i++) {
+            System.out.println(set1.myGet(i));
+        }
+
+
 
     }
 
@@ -38,9 +42,8 @@ class MySet1 {
         return set.keySet().toString();
     }
 
-    public Integer myGet(Integer i){ // получение элемента по индексу
-        ArrayList<Integer> tmp = new ArrayList<>(set.keySet());
-        return (Integer) tmp.get(i);
+    public Integer myGet(Integer u){ // получение элемента по индексу
+        return (Integer) set.keySet().toArray()[u];
     }
 
     public Integer mySize(){ // Возвращает кол-во элементов
